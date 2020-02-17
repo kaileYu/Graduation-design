@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.box{
+    position: relative;
+    width: 80%;
+}
+.hotList{
+    position: relative;
+    margin-top: 25%;
+}
+.info{
+    position: absolute;
+    bottom: -35%;
+    left: 5%;
+    background-color: white;
+    width: 80%;
+}
+.info:hover{
+    transform:translateY(-3%);
+}
+.hotListTitle{
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    position: relative;
+    left: 5%;
+    font-size: 14px;
+    overflow: hidden;
+    color: black;
+}
+.hotListName{
+    position: relative;
+    font-size: 12px;
+    color: #666;
+    line-height: 14px;
+    left: 5%;
+    margin-top: -2%;
+}
+.showPrice{
+    color: red;
+    position: relative;
+    left: 4%;
+    margin-top: -2%;
+}

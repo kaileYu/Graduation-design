@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.Homebox{
+    width: 90%;
+    margin: 0 auto;
+}
+.left{
+    font-size: 24px;
+    font-family: "楷体";
+    line-height: 100%;
+    position: relative;
+    left: 10%;
+    top: 10%;
+}
+.right{
+    position: relative;
+    left: 55%;
+    top: 10%;
+}
+.nav{
+    position: relative;
+    margin-left: 10%;
+    /* background: #741836; */
+    height: 15%;
+    border-bottom-color: #741836;
+    top: 30%;
+}
+span{
+    color: white;
+}
+.service{
+    width: 90%;
+    margin: 5% auto;
+    background-image: url('https://www.17sucai.com/preview/691463/2017-01-30/1/images/page1.jpg');
+    background-size: auto;
+    background-origin: padding-box;
+    background-clip: border-box;
+    background-color: transparent;
+}
+.lunbo{
+    width: 100%;
+    overflow: hidden;
+}
+.service_box{
+    width: 70%;
+    position: relative;
+    left: 15%;
+}
+.service_title{
+    text-align: center;
+    color: #77607c;
+}
+.service_ser{
+    color: #77607c;
+    font-size: 48px;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+.service_font{
+    color: #77607c;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+}
+.service_hotline{
+    font-size: 20px;
+    color: #606060;
+    line-height: 54px;
+    position: relative;
+    left: 30%;
+}
+.page{
+    display: flex;
+    flex-wrap: nowrap
+}
+.page1{
+    flex: 1;
+}
+.page_2{
+    flex: 2;
+    display: flex;
+    flex-direction:column;
+    flex-wrap: nowrap
+}
+.page_21,.page_22{
+    flex: 1;
+    display: flex;
+}
+.page2,.page5{
+    flex: 2;
+}
+.page3,.page4{
+    flex: 1;
+}
+.page3{
+    overflow: hidden;
+    float: left;
+    background: url('https://www.17sucai.com/preview/691463/2017-01-30/1/images/page1_title3.jpg') center center no-repeat #ffc000;
+}
+.page4{
+    overflow: hidden;
+    background: url('https://www.17sucai.com/preview/691463/2017-01-30/1/images/page1_title2.jpg') center center no-repeat #b53664;
+}
+.imgText{
+    width: 16%;
+    position: absolute;
+    left: 9%;
+    top: 80%;
+    background-color: rgba(0, 0, 0, 0.5) 
+}
+.Text1{
+    display: block;
+    text-align: center;
+    font-size: 26px;
+    color: #FFFFFF;
+}
+.Text2{
+    margin: 0 auto;
+}
+.img1{
+    width: 100%;
+    height: 100%;
+}
+.imgText2{
+   position: absolute;
+   top: 48%;
+   right: 6%;
+}
+.imgText3{
+    position: absolute;
+    top: 79%;
+    left: 39%;
+}
+

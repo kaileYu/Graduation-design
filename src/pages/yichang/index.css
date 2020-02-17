@@ -1,0 +1,117 @@
+.whole{
+    position: relative;
+    width: 70%;
+    left: 15%;
+}
+.head_nav{
+    padding-top: 2%;
+    margin: 0 auto;
+    box-shadow: 5px 5px 5px #999;
+}
+.nav{
+    list-style: none;
+    width: 100%;
+}
+.nav li{
+    text-align: center;
+    display: inline-block;
+    width: 10%;
+}
+.nav li:nth-child(1){
+    color: #f83244;
+}
+.Box{
+    width: 100%;
+    display: flex;
+}
+.infoList{
+    flex: 7;
+}
+.List{
+    margin-top: 2%;
+    display: flex;
+}
+.image{
+    flex: 2;
+    width: 30%;
+    vertical-align: middle;
+}
+.info{
+    flex: 3;
+}
+.title{
+    margin-top: 2%;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
+}
+.title:hover{
+    color: #f83244;
+}
+.shopArea,.name{
+    font-size: 14px;
+    color: #333;
+    vertical-align: middle;
+}
+.showPrice{
+    font-size: 28px;
+    color: #f83244;
+}
+.marketPrice{
+    font-size: 12px;
+    text-decoration: line-through;
+}
+
+
+/* hotList */
+*{
+    margin: 0;
+    padding: 0;
+}
+.hotList{
+    flex: 3;
+}
+.box{
+    position: relative;
+    width: 80%;
+}
+.HotListDemo{
+    position: relative;
+    margin-top: 25%;
+}
+.HotListinfo{
+    position: absolute;
+    bottom: -35%;
+    left: 5%;
+    background-color: white;
+    width: 80%;
+}
+.HotListinfo:hover{
+    transform:translateY(-3%);
+}
+.hotListTitle{
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    position: relative;
+    left: 5%;
+    font-size: 14px;
+    overflow: hidden;
+    color: black;
+}
+.hotListName{
+    position: relative;
+    font-size: 12px;
+    color: #666;
+    line-height: 14px;
+    left: 5%;
+    margin-top: -2%;
+}
+.HotListShowPrice{
+    color: red;
+    position: relative;
+    left: 4%;
+    margin-top: -2%;
+}
+.image2{
+    width: 90%;
+}

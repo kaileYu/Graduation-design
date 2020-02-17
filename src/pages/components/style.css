@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    background-color: #fbfbfb;
+}
+.box{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+.banner{
+    height: 20%;
+    width: 90%;
+    position: relative;
+    margin: 0 auto;
+    background-image: url('http://www.likewed.com/img/sj_bg1.jpg');
+}
+.logo{
+    width: 10%;
+    height: 100%;
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    background-size: cover;
+}
+.info{
+    height: 25%;
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+}
+.detail{
+    height: 100%;
+    width: 80%;
+    float: right;
+    color: #333;
+}
+.title{
+    color: #ff7066;
+    font-size: 26px;
+}
+span{
+    color: #999;
+    font-size: 14px;
+    margin-left: 2%;
+}
+.story{
+    width: 70%;
+    height: 20%;
+    margin: 0 auto;
+    border-bottom: 1px solid #999;
+}
+.stitle{
+    font-size: 18px;
+    color: #ff7066;
+    margin-top: 2%;
+}
+.sdetail{
+    margin-top: 2%;
+    color: #999;
+    font-size: 14px;
+}
+.Text{
+    margin-top: 2%;
+}
+.show{
+    width: 20%;
+    position: relative;
+    left: 15%;
+    margin-top: 2%;
+    font-size: 18px;
+    color: #ff7066;
+}
+.show_box{
+    background-color: white;
+    margin-top: 2%;
+}
+.pic{
+    width: 100%;
+}
+.pic_text{
+    color: #333;
+    font-size: 14px;
+    margin-left: 3%;
+}
+.pic_botton_text{
+    color: #333;
+    font-size: 12px;
+    margin-left: 3%;
+}
+.comment_box{
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 5%;
+    background-color: white;
+}
+.TextArea{
+    width: 90%;
+}
+.news{
+    width: 90%;
+    margin: 0 auto;
+    background: url("https://www.17sucai.com/preview/691463/2017-01-30/1/images/page2.jpg") center 0 no-repeat;
+}
+.news_box{
+    width: 70%;
+    position: relative;
+    left: 15%;
+}
+.news_header{
+    text-align: center;
+    color: #77607c;
+}
+.news_title{
+    color: #77607c;
+    font-size: 48px;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+.tabpane{
+    display: flex;
+    flex-direction: column;
+}
+.tabpane div img{
+    width: 25%;
+    position: relative;
+}
+.tabsText{
+    display: inline-block;
+    flex: 3;
+    width: 72%;
+    color: #77607c;
+    margin-left: 3%;
+}
+.tabsText1{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 58px;
+    border-bottom: #333 1px dashed;
+}
+.tabsText2{
+    font-size: 14px;
+    line-height: 24px;
+}
+.equ_box{
+    width: 90%;
+    margin: 5% auto 0 auto;
+    background: url('https://www.17sucai.com/preview/691463/2017-01-30/1/images/page3.jpg');
+}
+.equ_header{
+    color: #FFF;
+    text-align: center;
+}
+.equ_title{
+    color: #FFF;
+    font-size: 48px;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+.equ_bannar{
+    width: 70%;
+    margin: 0 auto; 
+}
+.bannerlist{
+    width: 25%;
+    display: inline-block;
+}
+.bottom_text{
+    text-align: center;
+    color: #434b52;
+    border: 1px solid #434b52;
+    width: 10%;
+    margin:  4% auto;
+    line-height: 34px;   
+}
+.bottom_text:hover{
+    background: #1a222d;
+    color: #4c5e74;
+    border-color: #1a222d;
+}
+
+/*weddingdress  style*/
+.weddingdress{
+    position: relative;
+    width: 70%;
+    left: 15%;
+}
+.wedding_nav{
+    padding-top: 2%;
+    margin: 0 auto;
+    box-shadow: 5px 5px 5px #999;
+}
+.wnav{
+    list-style: none;
+    width: 100%;
+}
+.wnav li{
+    text-align: center;
+    display: inline-block;
+    width: 8%;
+}
+.wnav li:nth-child(1){
+    color: #f83244;
+}
+.bigbox{
+    display: flex;
+}
+.weddingbox{
+    width: 60%;
+    flex: 7;
+}
+.weddinglist{
+    margin-top: 3%;
+    flex: 3;
+    display: flex;
+}
+.hotListBox{
+    flex: 3;
+    float: right;
+}
+.image{
+    /* flex: 2; */
+    width: 30%;
+    vertical-align: middle;
+}
+.info{
+    flex: 3;
+}
+.weddingtitle{
+    color: rgba(0,0,0,0.85);
+    margin-top: 2%;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
+}
+.weddingtitle:hover{
+    color: #f83244;
+}
+.shopArea,.name{
+    font-size: 14px;
+    color: #333;
+    vertical-align: middle;
+}
+.showPrice{
+    font-size: 28px;
+    color: #f83244;
+}
+.marketPrice{
+    font-size: 12px;
+    text-decoration: line-through;
+}
