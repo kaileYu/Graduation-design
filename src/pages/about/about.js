@@ -1,8 +1,8 @@
-import style from './style.css'
+import style from '../components/style.css'
 import React from 'react'
 import { Typography } from 'antd';
-import Comment from './comment'
-import Foot from '../../components/foot'
+import Comment from '../components/comment'
+// import Foot from '../../components/foot'
 export default function () {
     const { Text, Title } = Typography;
     return (
@@ -54,7 +54,6 @@ export default function () {
             <div className={style.comment_box}>网友评论
                 <Comment className={style.comment_box}></Comment>
             </div>
-            <Foot/>
         </div>
     )
 }

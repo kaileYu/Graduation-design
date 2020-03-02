@@ -3,7 +3,8 @@ export default {
         res.setHeader('Content-Type', 'application/json;charset=utf-8');
         var photograph = {
             "props": {
-                "list": [
+                "list": 
+                [
                     {
                         "marketPrice": 1599,
                         "showPrice": 1599,
@@ -278,27 +279,6 @@ export default {
                     {
                         "marketPrice": 1800,
                         "showPrice": 1800,
-                        "id": 1383183, "title": "三亚婚礼首席单机婚礼全天婚礼摄影跟拍",
-                        "coverPath": "https://qnm.hunliji.com/93BD973956228F8D9F39CA3A4F1B00EA.jpg",
-                        "merchant": {
-                            "id": 397372,
-                            "name": "三亚岛摄婚纱旅拍",
-                            "userId": 20093562,
-                            "isBond": 0,
-                            "grade": 0,
-                            "commentsCount": "0",
-                            "shopArea": "河东区街道",
-                            "score": 0, "goodRate": 0
-                        },
-                        "coupon": [],
-                        "consultGift": null,
-                        "shopGift": null,
-                        "orderGift": null,
-                        "installment": 161.25
-                    },
-                    {
-                        "marketPrice": 1800,
-                        "showPrice": 1800,
                         "id": 1383182,
                         "title": "三亚婚礼首席单机婚礼全天婚礼摄影跟拍",
                         "coverPath": "https://qnm.hunliji.com/0E47432F0D5BC47B3ACB8DCC409FFD15.jpg",
@@ -438,23 +418,7 @@ export default {
                     }], "totalPage": 217, "totalCount": 4330, "currentPage": "1"
             },
             "hotList": [
-                {
-                    "id": 1217445,
-                    "coverPath": "https://qnm.hunliji.com/02FD4EA8151A19AEFAB1E0E1287A5C0E.jpg",
-                    "title": "经典档单机位婚礼摄影原片全送精修60",
-                    "collectorsCount": 20,
-                    "merchant":
-                    {
-                        "id": 376150,
-                        "name": "南禾"
-                    },
-                    "showPrice": 1880,
-                    "merchantComment":
-                    {
-                        "score": "5.0",
-                        "goodRate": "1.000"
-                    }
-                },
+                { "id": 1217445, "coverPath": "https://qnm.hunliji.com/02FD4EA8151A19AEFAB1E0E1287A5C0E.jpg", "title": "经典档单机位婚礼摄影原片全送精修60", "collectorsCount": 20, "merchant": { "id": 376150, "name": "南禾" }, "showPrice": 1880, "merchantComment": { "score": "5.0", "goodRate": "1.000" } },
                 { "id": 121859, "coverPath": "https://qnm.hunliji.com/910E363011CC74ECF26C91821AEB4D14.jpg", "title": "【金星婚礼摄影】首席单机位婚礼摄影全天", "collectorsCount": 260, "merchant": { "id": 410285, "name": "金星" }, "showPrice": 1888, "merchantComment": { "score": "5.0", "goodRate": "1.000" } },
                 { "id": 288574, "coverPath": "https://qnm.hunliji.com/9DD045FC2906C5F5B4F2BE2577BCCDE6.jpg", "title": "橘子婚礼 总监+资深双机套餐", "collectorsCount": 51, "merchant": { "id": 14359, "name": "徐喆" }, "showPrice": 6380, "merchantComment": { "score": "5.0", "goodRate": "1.000" } },
                 { "id": 181089, "coverPath": "https://qnm.hunliji.com/901845CA81C225E3A41AA2D3DAA2EC5D.jpg", "title": "豚豚婚礼影像，3机位摄影摄像任意组合", "collectorsCount": 294, "merchant": { "id": 408483, "name": "mis豚" }, "showPrice": 6880, "merchantComment": { "score": "5.0", "goodRate": "1.000" } },
@@ -476,7 +440,8 @@ export default {
                     { "id": 351823, "name": "雅琳", "logoPath": "https://qnm.hunliji.com/B03CD907708AA30DAA174EE498B7F702.jpg", "commentsCount": 3, "goodRate": "1.000" },
                     { "id": 347229, "name": "照相小哥wilson", "logoPath": "http://qnm.hunliji.com/FnCaHkAo73bhSdgtDRb3xSQTOwBx", "commentsCount": 3, "goodRate": "1.000" },
                     { "id": 372935, "name": "华哥", "logoPath": "https://qnm.hunliji.com/Fjy8YWF-hRulT4xZTT9_ckD3hbOo", "commentsCount": 1, "goodRate": "1.000" },
-                    { "id": 398853, "name": "佐木", "logoPath": "https://qnm.hunliji.com/Fg22EZtzulZVE2wKet12D8XlePyV", "commentsCount": 54, "goodRate": "1.000" }],
+                    { "id": 398853, "name": "佐木", "logoPath": "https://qnm.hunliji.com/Fg22EZtzulZVE2wKet12D8XlePyV", "commentsCount": 54, "goodRate": "1.000" }
+                ],
             "marks": [
                 {
                     "id": 117, "name": "类型", "level": 1, "children": [{ "id": 3940, "markId": 14195, "name": "婚礼摄影", "level": 2 }, { "id": 3941, "markId": 13278, "name": "结婚登记照", "level": 2 }, { "id": 120, "markId": 50, "name": "领证跟拍", "level": 2 }, { "id": 121, "markId": 97, "name": "写真", "level": 2 }]

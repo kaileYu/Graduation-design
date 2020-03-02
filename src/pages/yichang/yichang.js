@@ -56,6 +56,20 @@ function yichang({ dispatch, props }) {
                         }
                     </div>
                 </div>
+                <div className={style.recommendMerchants}>
+                    <h2>同类套餐商家推荐</h2>
+                    <div className={style.recommendMerchantsBox}>
+                        {
+                            props.props.topQualityMerchant.map(function (item, i) {
+                                return (<div className={style.recommendMerchants_imgae} key={i}>
+                                    <img alt="" src={item.logoPath} />
+                                    <p className={style.recommendMerchants_name}>{item.name}</p>
+                                    <p className={style.commentsCount}>{item.commentsCount}评价<span className={style.goodRate}>{item.goodRate * 100}%</span></p>
+                                </div>)
+                            })
+                        }
+                    </div>
+                </div>
             </div>
         )
     } else {

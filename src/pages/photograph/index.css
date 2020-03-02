@@ -1,114 +1,177 @@
-.photograph{
-    position: relative;
-    width: 70%;
-    left: 15%;
+.photograph {
+  position: relative;
+  width: 70%;
+  left: 15%;
 }
-.photograph_nav{
-    padding-top: 2%;
-    margin: 0 auto;
-    box-shadow: 5px 5px 5px #999;
+
+.photograph_nav {
+  padding-top: 2%;
+  margin: 0 auto;
+  box-shadow: 5px 5px 5px #999;
 }
-.pnav,.pnav2{
-    list-style: none;
-    width: 100%;
+
+.pnav,
+.pnav2 {
+  list-style: none;
+  width: 100%;
 }
-.pnav li,.pnav2 li{
-    text-align: center;
-    display: inline-block;
-    width: 8%;
+
+.pnav li,
+.pnav2 li {
+  text-align: center;
+  display: inline-block;
+  width: 8%;
 }
-.pnav li:nth-child(1),.pnav2 li:nth-child(1){
-    color: #f83244;
+
+.pnav li:nth-child(1),
+.pnav2 li:nth-child(1) {
+  color: #f83244;
 }
-.photographbox{
-    width: 100%;
-    display: flex;
+
+.photographbox {
+  width: 100%;
+  display: flex;
 }
-.photoList{
-    flex: 7;
+
+.photoList {
+  flex: 7;
 }
-.photographlist{
-    margin-top: 2%;
-    display: flex;
+
+.photographlist {
+  margin-top: 2%;
+  display: flex;
 }
-.image{
-    flex: 2;
-    width: 30%;
-    vertical-align: middle;
+
+.image {
+  flex: 2;
+  width: 30%;
+  vertical-align: middle;
 }
-.info{
-    flex: 3;
+
+.info {
+  flex: 3;
 }
-.photographtitle{
-    margin-top: 2%;
-    font-size: 18px;
-    line-height: 26px;
-    font-weight: bold;
+
+.photographtitle {
+  margin-top: 2%;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  color: black;
 }
-.photographtitle:hover{
-    color: #f83244;
+
+.photographtitle:hover {
+  color: #f83244;
 }
-.shopArea,.name{
-    font-size: 14px;
-    color: #333;
-    vertical-align: middle;
+
+.shopArea,
+.name {
+  font-size: 14px;
+  color: #333;
+  vertical-align: middle;
 }
-.showPrice{
-    font-size: 28px;
-    color: #f83244;
+
+.showPrice {
+  font-size: 28px;
+  color: #f83244;
 }
-.marketPrice{
-    font-size: 12px;
-    text-decoration: line-through;
+
+.marketPrice {
+  font-size: 12px;
+  text-decoration: line-through;
 }
 
 
 /* hotList */
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-.hotList{
-    flex: 3;
+
+.hotList {
+  flex: 3;
 }
-.box{
-    position: relative;
-    width: 80%;
+
+.box {
+  position: relative;
+  width: 80%;
 }
-.List{
-    position: relative;
-    margin-top: 25%;
+
+.List {
+  position: relative;
+  margin-top: 25%;
 }
-.HotListinfo{
-    position: absolute;
-    bottom: -35%;
-    left: 5%;
-    background-color: white;
-    width: 80%;
+
+.HotListinfo {
+  position: absolute;
+  bottom: -35%;
+  left: 5%;
+  background-color: white;
+  width: 80%;
 }
-.HotListinfo:hover{
-    transform:translateY(-3%);
+
+.HotListinfo:hover {
+  transform: translateY(-3%);
 }
-.hotListTitle{
-    white-space: nowrap;
-    text-overflow:ellipsis;
-    position: relative;
-    left: 5%;
-    font-size: 14px;
-    overflow: hidden;
-    color: black;
+
+.hotListTitle {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  position: relative;
+  left: 5%;
+  font-size: 14px;
+  overflow: hidden;
+  color: black;
 }
-.hotListName{
-    position: relative;
-    font-size: 12px;
-    color: #666;
-    line-height: 14px;
-    left: 5%;
-    margin-top: -2%;
+
+.hotListName {
+  position: relative;
+  font-size: 12px;
+  color: #666;
+  line-height: 14px;
+  left: 5%;
+  margin-top: -2%;
 }
-.HotListShowPrice{
-    color: red;
-    position: relative;
-    left: 4%;
-    margin-top: -2%;
+
+.HotListShowPrice {
+  color: red;
+  position: relative;
+  left: 4%;
+  margin-top: -2%;
+}
+
+/*同类套餐商家推荐*/
+.recommendMerchantsBox {
+  position: relative;
+  display: flex;
+}
+
+.recommendMerchants_name {
+  font-size: 12px;
+  color: black;
+  margin-left: 2%;
+}
+
+.commentsCount {
+  font-size: 12px;
+  color: #999;
+  line-height: 12px;
+  margin-top: -4%;
+  margin-left: 2%;
+}
+
+.recommendMerchants_imgae {
+  flex: 1;
+  width: 90%;
+  background-color: white;
+}
+
+.goodRate {
+  font-size: 12px;
+  float: right;
+  transform: translateX(-160%);
+}
+
+.hotList_remai {
+  margin-left: 10%;
 }

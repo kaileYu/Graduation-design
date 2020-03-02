@@ -21,6 +21,7 @@ export default {
                     list: data.packageList.list,
                     hotList: data.hotList,
                     marks: data.marks,
+                    topQualityMerchant: data.topQualityMerchant
                 },
             });
         },

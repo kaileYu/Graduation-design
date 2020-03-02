@@ -23,7 +23,7 @@ export default {
         },
         {
           path: '/about',
-          component: '../pages/components/about',
+          component: '../pages/about/about',
         },
         {
           path: '/weddingdress',
@@ -33,6 +33,14 @@ export default {
           path: '/photograph',
           component: '../pages/photograph/photograph'
         },
+        {
+          path: '/weddingdress/weddingdressInfoList',
+          component: '../pages/weddingdress/weddingdress_info/weddingdressInfoList'
+        },
+        {
+          path: '/photograph/photographInfoList',
+          component: '../pages/photograph/photographInfoList/photographInfoList'
+        }
       ],
     },
   ],

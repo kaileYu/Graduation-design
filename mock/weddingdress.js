@@ -65,7 +65,7 @@ export default {
                         { "marketPrice": 4200, "showPrice": 2000, "id": 674625, "title": "【特价租赁】礼服租赁-全款送新娘头纱手套头饰一件", "coverPath": "http://qnm.hunliji.com/616C53E3A879A5FF8DD13DEF84B85DFE", "merchant": { "id": 346165, "name": "婉纱仙妮三亚店", "userId": 9369645, "isBond": 0, "grade": 0, "commentsCount": "0", "shopArea": "河西区街道", "score": 0, "goodRate": 0 }, "coupon": [], "consultGift": null, "shopGift": null, "orderGift": null, "installment": 179.17 },
                         { "marketPrice": 1488, "showPrice": 1339, "id": 636990, "title": "CIPRESSO 高级定制男装-伴郎服系列", "coverPath": "http://qnm.hunliji.com/B6266947E20F77DF1481E7ACFF0E8C29", "merchant": { "id": 346165, "name": "婉纱仙妮三亚店", "userId": 9369645, "isBond": 0, "grade": 0, "commentsCount": "0", "shopArea": "河西区街道", "score": 0, "goodRate": 0 }, "coupon": [], "consultGift": null, "shopGift": null, "orderGift": "男士衬衫一件", "installment": 119.95 },
                         { "marketPrice": 7000, "showPrice": 3000, "id": 674607, "title": "【限时特价】租赁新娘婚纱礼服7件套 轻奢定制体验", "coverPath": "http://qnm.hunliji.com/ED753C694DBEDB996008E6B6FB2D96FD", "merchant": { "id": 346165, "name": "婉纱仙妮三亚店", "userId": 9369645, "isBond": 0, "grade": 0, "commentsCount": "0", "shopArea": "河西区街道", "score": 0, "goodRate": 0 }, "coupon": [], "consultGift": null, "shopGift": null, "orderGift": null, "installment": 268.75 },
-                        { "marketPrice": 1588, "showPrice": 1429, "id": 636954, "title": "CIPRESSO 高级定制男装-新郎韩版西装系列", "coverPath": "http://qnm.hunliji.com/D19B2A421C4E2A0E2B219CD1FCD85232", "merchant": { "id": 346165, "name": "婉纱仙妮三亚店", "userId": 9369645, "isBond": 0, "grade": 0, "commentsCount": "0", "shopArea": "河西区街道", "score": 0, "goodRate": 0 }, "coupon": [], "consultGift": null, "shopGift": null, "orderGift": "CIPRESSO高定衬衫一件", "installment": 128.01 }, { "marketPrice": 1588, "showPrice": 1429, "id": 636963, "title": "CIPRESSO 高级定制男装-新郎韩版西装系列", "coverPath": "http://qnm.hunliji.com/03F419C7F38799C0ED5048C40BEAE78E", "merchant": { "id": 346165, "name": "婉纱仙妮三亚店", "userId": 9369645, "isBond": 0, "grade": 0, "commentsCount": "0", "shopArea": "河西区街道", "score": 0, "goodRate": 0 }, "coupon": [], "consultGift": null, "shopGift": null, "orderGift": "男士高级定制衬衫一件", "installment": 128.01 }
+                        { "marketPrice": 1588, "showPrice": 1429, "id": 636954, "title": "CIPRESSO 高级定制男装-新郎韩版西装系列", "coverPath": "http://qnm.hunliji.com/D19B2A421C4E2A0E2B219CD1FCD85232", "merchant": { "id": 346165, "name": "婉纱仙妮三亚店", "userId": 9369645, "isBond": 0, "grade": 0, "commentsCount": "0", "shopArea": "河西区街道", "score": 0, "goodRate": 0 }, "coupon": [], "consultGift": null, "shopGift": null, "orderGift": "CIPRESSO高定衬衫一件", "installment": 128.01 }
                     ],
                 "totalPage": 2019,
                 "totalCount": 40369,
@@ -98,6 +98,24 @@ export default {
                     { "id": 206376, "coverPath": "https://qnm.hunliji.com/93BC5FDB902C1FB2D7E7AB99E8AEAB01.jpg", "title": "【2020新春特价套餐】婚纱5件套＋全天跟妆 ", "collectorsCount": 738, "merchant": { "id": 25660, "name": "梦想屋嫁衣工坊" }, "showPrice": 2980, "merchantComment": { "score": "5.0", "goodRate": "1.000" } },
                     { "id": 238801, "coverPath": "http://qnm.hunliji.com/o_1bjuc08qi1v1ljfa1urv1fcr1hpau.jpg", "title": "【AK婚纱限时大促】样衣特惠活动", "collectorsCount": 445, "merchant": { "id": 10626, "name": "AK婚纱高级定制" }, "showPrice": 580, "merchantComment": { "score": "5.0", "goodRate": "1.000" } },
                     { "id": 1359921, "coverPath": "https://qnm.hunliji.com/522A914502DFCEFAAAD04F038668BBA4.jpg", "title": "【礼遇七夕超值特价】轻奢婚纱一件＋出门褂＋敬酒服", "collectorsCount": 145, "merchant": { "id": 143272, "name": "Marry Wang婚纱礼服集成店" }, "showPrice": 2019, "merchantComment": { "score": "5.0", "goodRate": "1.000" } }
+                ],
+            "topQualityMerchant":
+                [
+                    {
+                        "id": 22313,
+                        "name": "糖果婚纱嫁衣馆",
+                        "logoPath": "http://qnm.hunliji.com//FohXXBXAuH8PPv4cao7QyY8sXe7Q",
+                        "commentsCount": 569, "goodRate": "1.000"
+                    },
+                    {
+                        "id": 398276,
+                        "name": "HER BRIDAL婚纱礼服海外高级定制",
+                        "logoPath": "https://qnm.hunliji.com/FiMKdzrFKnKX8TNfBp6Ig9GsnQB1",
+                        "commentsCount": 107, "goodRate": "1.000"
+                    },
+                    { "id": 399589, "name": "J DRESS瑾媛婚纱【设计师驻店】", "logoPath": "https://qnm.hunliji.com/B1A94F6C6325BD3C96337EEB8172201D.jpg", "commentsCount": 23, "goodRate": "1.000" },
+                    { "id": 352705, "name": "希若婚纱明星合作", "logoPath": "http://qnm.hunliji.com/91318876330C157B75AFEC98B969F76B", "commentsCount": 105, "goodRate": "1.000" },
+                    { "id": 137862, "name": "上善造型（旗舰店）", "logoPath": "http://qnm.hunliji.com/3470AA4A3937B4581212395AE8648288", "commentsCount": 2705, "goodRate": "1.000" }
                 ],
             "marks":
                 [
@@ -160,29 +178,5 @@ export default {
                 ],
         }
         res.send(JSON.stringify(hotList));
-    },
-    'GET /api/topQualityMerchant': (res, req) => {
-        res.setHeader('Content-Type', 'application/JSON;charset=utf-8');
-        var topQualityMerchant = {
-            "topQualityMerchant":
-                [
-                    {
-                        "id": 22313,
-                        "name": "糖果婚纱嫁衣馆",
-                        "logoPath": "http://qnm.hunliji.com//FohXXBXAuH8PPv4cao7QyY8sXe7Q",
-                        "commentsCount": 569, "goodRate": "1.000"
-                    },
-                    {
-                        "id": 398276,
-                        "name": "HER BRIDAL婚纱礼服海外高级定制",
-                        "logoPath": "https://qnm.hunliji.com/FiMKdzrFKnKX8TNfBp6Ig9GsnQB1",
-                        "commentsCount": 107, "goodRate": "1.000"
-                    },
-                    { "id": 399589, "name": "J DRESS瑾媛婚纱【设计师驻店】", "logoPath": "https://qnm.hunliji.com/B1A94F6C6325BD3C96337EEB8172201D.jpg", "commentsCount": 23, "goodRate": "1.000" },
-                    { "id": 352705, "name": "希若婚纱明星合作", "logoPath": "http://qnm.hunliji.com/91318876330C157B75AFEC98B969F76B", "commentsCount": 105, "goodRate": "1.000" },
-                    { "id": 137862, "name": "上善造型（旗舰店）", "logoPath": "http://qnm.hunliji.com/3470AA4A3937B4581212395AE8648288", "commentsCount": 2705, "goodRate": "1.000" }
-                ],
-        }
-        res.send(JSON.stringify(topQualityMerchant));
     },
 };

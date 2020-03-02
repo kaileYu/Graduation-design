@@ -43,3 +43,33 @@
     left: 4%;
     margin-top: -2%;
 }
+/*同类套餐商家推荐*/
+.recommendMerchantsBox{
+    position: relative;
+    display: flex;
+  }
+  .recommendMerchants_name{
+    font-size: 12px;
+    color: black;
+    margin-left: 2%;
+  }
+  .commentsCount{
+    font-size: 12px;
+    color: #999;
+    line-height: 12px;
+    margin-top: -4%;
+    margin-left: 2%;
+  }
+  .recommendMerchants_imgae{
+    flex: 1;
+    width: 90%;
+    background-color: white;
+  }
+  .goodRate{
+    font-size: 12px;
+    float: right;
+    transform: translateX(-160%);
+  }
+  .hotList_remai{
+    margin-left: 10%;
+  }

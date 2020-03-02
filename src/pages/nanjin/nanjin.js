@@ -21,14 +21,14 @@ function nanjing({ dispatch, props }) {
                                 return (
                                     <div key={i} className={style.List}>
                                         <div className={style.List}>
-                                            <div className={style.image}><img alt="" src={item.coverPath}/></div>
+                                            <div className={style.image}><img alt="" src={item.coverPath} /></div>
                                             <div className={style.info}>
                                                 <p className={style.title}>{item.title}</p>
                                                 <p>
                                                     <span className={style.shopArea}>{item.merchant.shopArea}</span>|<span className={style.name}>{item.merchant.name}</span>
                                                 </p>
                                                 <p><span className={style.showPrice}>￥{item.showPrice}</span>
-                                                <span className={style.marketPrice}>￥{item.marketPrice}</span></p>
+                                                    <span className={style.marketPrice}>￥{item.marketPrice}</span></p>
                                             </div>
                                         </div>
                                     </div>
@@ -43,7 +43,7 @@ function nanjing({ dispatch, props }) {
                                 return (
                                     <div key={i} className={style.HotListDemo}>
                                         <div >
-                                            <img alt="" src={item.coverPath} className={style.image2}/>
+                                            <img alt="" src={item.coverPath} className={style.image2} />
                                         </div>
                                         <div className={style.HotListinfo}>
                                             <p className={style.hotListTitle} alt={item.title}>{item.title}</p>
@@ -52,6 +52,20 @@ function nanjing({ dispatch, props }) {
                                         </div>
                                     </div>
                                 )
+                            })
+                        }
+                    </div>
+                </div>
+                <div className={style.recommendMerchants}>
+                    <h2>同类套餐商家推荐</h2>
+                    <div className={style.recommendMerchantsBox}>
+                        {
+                            props.props.topQualityMerchant.map(function (item, i) {
+                                return (<div className={style.recommendMerchants_imgae} key={i}>
+                                    <img alt="" src={item.logoPath} />
+                                    <p className={style.recommendMerchants_name}>{item.name}</p>
+                                    <p className={style.commentsCount}>{item.commentsCount}评价<span className={style.goodRate}>{item.goodRate * 100}%</span></p>
+                                </div>)
                             })
                         }
                     </div>
