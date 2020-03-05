@@ -35,10 +35,10 @@ export default function () {
                         <Menu.Item key="setting:2"><Link to='/quary/yichang'>宜昌婚礼套系</Link></Menu.Item>
                     </SubMenu>
                     <Menu.Item key="1">
-                        <span>商业庆典</span>
+                        <Link to="/qingdian"><span>商业庆典</span></Link>
                     </Menu.Item>
                     <Menu.Item key="2">
-                        <span>婚礼单项</span>
+                        <Link to='/danxiang'><span>婚礼单项</span></Link>
                     </Menu.Item>
                     <Menu.Item key="3">
                         <Link to='/weddingdress'><span>精品婚纱</span></Link>  

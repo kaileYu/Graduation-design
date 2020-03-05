@@ -5,11 +5,11 @@ import { Tabs } from 'antd';
 import { Icon } from 'antd';
 import Comment from '../../components/comment'
 const { TabPane } = Tabs
-function weddingdressInfoList({ dispatch, list }) {
+function yichangInfoList({ dispatch, list }) {
     let text = window.location.href;
     let a = text.split("?");
     let id = JSON.parse(a[1].substring(3))
-    if (list.list !== null && list.list !== undefined) {
+    if (list.lit !== null && list.list !== undefined) {
         function data() {
             for (var item of list.list.list) {
                 if (item.id === id) {
@@ -17,18 +17,20 @@ function weddingdressInfoList({ dispatch, list }) {
                 }
             }
             return item.props
-        }
+        } 
         return (
             <div className={style.weddingdressInfoList}>
                 <div className={style.head_nav}>
                     <div className={style.imageBox}>
                         <div className={style.Bigimg} ><img id="demoImage" alt="" src={data().pageProps.packageDetail.merchandiseItems[0].mediaPath} /></div>
                         <div className={style.smollImg}>
-                            <div className={style.infoimg}><img alt="" src={data().pageProps.packageDetail.merchandiseItems[0].mediaPath} id="imagee1" /></div>
-                            <div className={style.infoimg}><img alt="" src={data().pageProps.packageDetail.merchandiseItems[1].mediaPath} id="imagee2" /></div>
-                            <div className={style.infoimg}><img alt="" src={data().pageProps.packageDetail.merchandiseItems[2].mediaPath} id="imagee3" /></div>
-                            <div className={style.infoimg}><img alt="" src={data().pageProps.packageDetail.merchandiseItems[3].mediaPath} id="imagee4" /></div>
-                            <div className={style.infoimg}><img alt="" src={data().pageProps.packageDetail.merchandiseItems[4].mediaPath} id="imagee5" /></div>
+                            {
+                                data().pageProps.packageDetail.merchandiseItems.map(function(item,i){
+                                    return(
+                                        <div key={i} className={style.infoimg}><img alt="" src={item.mediaPath} id="imagee2" /></div>
+                                    )
+                                })
+                            }
                         </div>
                     </div>
                     <div className={style.info}>
@@ -56,26 +58,24 @@ function weddingdressInfoList({ dispatch, list }) {
                                 <div>
                                     <h3>套餐参数</h3>
                                 </div>
-                                <div>      {/*  setMealInfoValues.children.map() */}
+                                <div>
                                     {
                                         data().pageProps.packageDetail.setMealInfoValues.map(function (item, i) {
                                             return (<div key={i} className={style.infoList_title}>{item.title}
                                                 {
                                                     item.children.map(function (data, i) {
-                                                        return (
-                                                            <p key={i} className={style.infolist_list}><span className={style.data_title}>{data.title}</span>
-                                                                <span className={style.data_fieldValue}>{data.fieldValue}</span></p>
-                                                        )
+                                                        return (<p key={i} className={style.infolist_list}>
+                                                            <span className={style.data_title}>{data.title}</span>
+                                                            <span className={style.data_fieldValue}>{data.fieldInfoValue}</span>
+                                                        </p>)
                                                     })
                                                 }
                                             </div>)
                                         })
                                     }
-
                                 </div>
                             </TabPane>
                             <TabPane tab="图文详情" key="2">
-                                {/* setMealDetails.map()  item.coverPath */}
                                 <div className={style.imgaeList}>
                                     {
                                         data().pageProps.packageDetail.setMealDetails.map(function (item, i) {
@@ -86,7 +86,6 @@ function weddingdressInfoList({ dispatch, list }) {
                                     }
                                 </div>
                             </TabPane>
-                            
                             <TabPane tab="用户评论" key="3">
                                 <Comment></Comment>
                             </TabPane>
@@ -95,7 +94,7 @@ function weddingdressInfoList({ dispatch, list }) {
                     <div className={style.hotList}>
                         <div className={style.hotList_remai}><h2>同类热卖</h2></div>
                         {
-                            data().pageProps.packageDetail.newestWorks.map(function (item, i) {
+                            data().pageProps.hotPackages.map(function (item, i) {
                                 return (<div key={i} className={style.itemBox}>
                                     <div>
                                         <img alt="" src={item.coverPath} />
@@ -133,7 +132,7 @@ function weddingdressInfoList({ dispatch, list }) {
 
 function mapStateToProps(state) {
     return {
-        list: state.GetList
+        list: state.YCList
     };
 }
-export default connect(mapStateToProps)(weddingdressInfoList);
+export default connect(mapStateToProps)(yichangInfoList);

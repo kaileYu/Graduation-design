@@ -144,39 +144,4 @@ export default {
         }
         res.end(JSON.stringify(weddingdress));
     },
-    'GET /api/hotList': (req, res) => {
-        res.setHeader('Content-Type', 'application/json;charset=utf-8');
-        var hotList = {
-            "hotList":
-                [
-                    {
-                        "id": 632989,
-                        "coverPath": "http://qnm.hunliji.com/45B8E9557E9D72F4D3F6ECBDBDBD80EB",
-                        "title": "霸气长拖集锦适合层高5米及以上酒店",
-                        "collectorsCount": 4,
-                        "merchant":
-                        {
-                            "id": 343842,
-                            "name": "Dream Bridal 韩国"
-                        },
-                        "showPrice": 2660,
-                        "merchantComment":
-                        {
-                            "score": "4.9",
-                            "goodRate": "1.000"
-                        }
-                    },
-                    { "id": 309069, "coverPath": "http://qnm.hunliji.com/52D5B3E2A8A21FC45F9BB90FA5E96081", "title": "2018PINKY双色婚纱新品礼服系列(拍这个）", "collectorsCount": 36, "merchant": { "id": 21896, "name": "VANNY.BRIDAL婚纱馆" }, "showPrice": 100, "merchantComment": { "score": "5.0", "goodRate": "1.000" } },
-                    { "id": 817680, "coverPath": "http://qnm.hunliji.com/859DA0288A5AA433CE9F227EC2FD3ED0", "title": "婚纱四件套【押金专属链接】", "collectorsCount": 9, "merchant": { "id": 358502, "name": "Dream Bridal高定婚纱湖州店" }, "showPrice": 3000, "merchantComment": { "score": "5.0", "goodRate": "1.000" } },
-                    { "id": 849838, "coverPath": "http://qnm.hunliji.com/BE590471A53E76010B638A88F6FAF955.png", "title": "100%纯羊毛 | 100s 定制西服套装", "collectorsCount": 2, "merchant": { "id": 368440, "name": "Just Him男士礼服高级定制湖州店" }, "showPrice": 2999, "merchantComment": { "score": "5.0", "goodRate": "1.000" } },
-                    { "id": 834902, "coverPath": "http://qnm.hunliji.com/BE590471A53E76010B638A88F6FAF955.png", "title": "100%纯羊毛 | 100s 定制西服套装", "collectorsCount": 9, "merchant": { "id": 128687, "name": "Just Him男士礼服高级定制杭州店" }, "showPrice": 2999, "merchantComment": { "score": "5.0", "goodRate": "1.000" } },
-                    { "id": 423219, "coverPath": "http://qnm.hunliji.com/5155B69D4BA6D8F4F3167A2C0D4CE33E", "title": "【布艺禧匠】西装＋齐地婚纱组合套餐", "collectorsCount": 7, "merchant": { "id": 338924, "name": "布艺禧匠婚纱礼服" }, "showPrice": 2580, "merchantComment": { "score": "4.8", "goodRate": "0.970" } },
-                    { "id": 1389967, "coverPath": "https://qnm.hunliji.com/4806C5BB4BAB6FE1F1689B545DBC5B95.jpg", "title": "婚礼四件套（婚纱/礼服/裙褂/妈妈装）", "collectorsCount": 0, "merchant": { "id": 400617, "name": "莳光婚纱礼服馆" }, "showPrice": 9999, "merchantComment": null },
-                    { "id": 206376, "coverPath": "https://qnm.hunliji.com/93BC5FDB902C1FB2D7E7AB99E8AEAB01.jpg", "title": "【2020新春特价套餐】婚纱5件套＋全天跟妆 ", "collectorsCount": 738, "merchant": { "id": 25660, "name": "梦想屋嫁衣工坊" }, "showPrice": 2980, "merchantComment": { "score": "5.0", "goodRate": "1.000" } },
-                    { "id": 238801, "coverPath": "http://qnm.hunliji.com/o_1bjuc08qi1v1ljfa1urv1fcr1hpau.jpg", "title": "【AK婚纱限时大促】样衣特惠活动", "collectorsCount": 445, "merchant": { "id": 10626, "name": "AK婚纱高级定制" }, "showPrice": 580, "merchantComment": { "score": "5.0", "goodRate": "1.000" } },
-                    { "id": 1359921, "coverPath": "https://qnm.hunliji.com/522A914502DFCEFAAAD04F038668BBA4.jpg", "title": "【礼遇七夕超值特价】轻奢婚纱一件＋出门褂＋敬酒服", "collectorsCount": 145, "merchant": { "id": 143272, "name": "Marry Wang婚纱礼服集成店" }, "showPrice": 2019, "merchantComment": { "score": "5.0", "goodRate": "1.000" } }
-                ],
-        }
-        res.send(JSON.stringify(hotList));
-    },
 };

@@ -2,10 +2,14 @@ import style from '../components/style.css';
 import { connect } from 'dva';
 import { Empty } from 'antd';
 import wedding from './wedding.css';
-// import { router } from 'umi'
-import { HashRouter, Link } from 'umi'
-function weddingdress({ dispatch, props }) {
-    if (props.props.list !== null && props.props.list !== undefined) {
+import { withRouter } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import React from 'react'
+function weddingdress({ data }, props) {
+    const handleClick = () => {
+        // this.props.history.push({pathname:'/weddingdress/weddingdressInfoList'})
+    }
+    if (data.props.list !== null && data.props.list !== undefined) {
         return (
             <div className={style.weddingdress}>
                 {/* <div className={style.wedding_nav}>
@@ -32,21 +36,21 @@ function weddingdress({ dispatch, props }) {
                 <div className={style.bigbox}>
                     <div className={style.weddingbox} id='cha' >
                         {
-                            props.props.list.map(function (item, i) {
+                            data.props.list.map(function (item, i) {
                                 // function goToWeddingdressList(id) {
-                                //     router.push({pathname:`/weddingdress/weddingdressInfoList?id=${item.id}`,id:item.id})
+                                //     router.push({pathname:`/weddingdress/weddingdressInfoList`,id:item.id})
                                 // }
                                 return (
-                                    <div key={i} className={style.weddinglist}><HashRouter>
+                                    <div key={i} className={style.weddinglist}>
                                         <img alt="" src={item.coverPath} className={style.image} />
                                         <div className={style.info}>
                                             {/* <p className={style.weddingtitle} onClick={goToWeddingdressList(item.id)}> {item.title} </p> */}
-                                            <Link to={{ pathname: `/weddingdress/weddingdressInfoList?id=${item.id}`, state: { typeId: item.id } }}><p className={style.weddingtitle}> {item.title} </p></Link>
+                                            <Link to={{ pathname: '/weddingdress/weddingdressInfoList', query: { id: item.id } }}><p className={style.weddingtitle}> {item.title} </p></Link>
                                             <p><span className={style.shopArea}>{item.merchant.shopArea}</span>|
                                                 <span className={style.name}>{item.merchant.name}</span></p>
                                             <p><span className={style.showPrice}>￥{item.showPrice}</span>
                                                 <span className={style.marketPrice}>￥{item.marketPrice}</span></p>
-                                        </div></HashRouter>
+                                        </div>
                                     </div>
                                 )
                             })
@@ -56,7 +60,7 @@ function weddingdress({ dispatch, props }) {
                         <div className={wedding.box}>
                             <h2>同城热卖套餐</h2>
                             {
-                                props.props.hotList.map(function (item, i) {
+                                data.props.hotList.map(function (item, i) {
                                     return (
                                         <div key={i} className={wedding.hotList}>
                                             <div className={wedding.imageBox}><img alt="" src={item.coverPath} /></div>
@@ -71,11 +75,12 @@ function weddingdress({ dispatch, props }) {
                         </div>
                     </div>
                 </div>
+                <button onClick={handleClick}>asada</button>
                 <div className={style.recommendMerchants}>
                     <h2>同类套餐商家推荐</h2>
                     <div className={wedding.recommendMerchantsBox}>
                         {
-                            props.props.topQualityMerchant.map(function (item, i) {
+                            data.props.topQualityMerchant.map(function (item, i) {
                                 return (<div className={wedding.recommendMerchants_imgae} key={i}>
                                     <img alt="" src={item.logoPath} />
                                     <p className={wedding.recommendMerchants_name}>{item.name}</p>
@@ -95,7 +100,7 @@ function weddingdress({ dispatch, props }) {
 }
 function mapStateToProps(state) {
     return {
-        props: state.wedding
+        data: state.wedding
     };
 }
-export default connect(mapStateToProps)(weddingdress);
+export default connect(mapStateToProps)(withRouter(weddingdress));

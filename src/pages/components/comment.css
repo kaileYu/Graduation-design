@@ -1,0 +1,21 @@
+.comment{
+    width: 90%;
+    margin: 0 auto;
+}
+.content{
+    width: 90%;
+    font-size: 12px;
+    margin-left: 2%;
+    color: black;
+}
+.time{
+    font-size: 12px;
+}
+.imageBox{
+    margin-left: 8%;
+    margin-top: -2%;
+}
+.image{
+    width: 10%;
+    height: 10%;
+}

@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .weddingdressInfoList {
+    width: 70%;
+    position: relative;
+    margin: 0 auto;
+  }
+  
+  .head_nav {
+    display: flex;
+    margin-top: 1%;
+  }
+  
+  .imageBox {
+    flex: 3;
+    position: relative;
+  }
+  
+  .Bigimg {
+    left: 50%;
+    background-color: #ccc;
+  }
+  
+  .Bigimg img {
+    width: 80%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .smollImg {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1%;
+  }
+  
+  .infoimg {
+    flex: 1;
+  }
+  
+  .info {
+    flex: 3;
+  }
+  
+  .info_title {
+    font-size: 20px;
+    color: black;
+    margin-left: 10%;
+  }
+  
+  .info_title:hover {
+    color: red;
+  }
+  
+  .showPrice {
+    font-size: 24px;
+    font-weight: 600;
+    color: tomato;
+    margin-left: 10%;
+  }
+  
+  .marketPrice {
+    font-size: 12px;
+    text-decoration: line-through;
+  }
+  
+  .dingjing {
+    font-size: 12px;
+    color: #251d1d;
+    margin-left: 10%;
+  }
+  
+  .xiadanyouhui,
+  .huabiefenqi {
+    margin-left: 10%;
+  }
+  
+  .xiadan,
+  .huabie {
+    background: #fff1f6;
+    font-size: 10px;
+    position: relative;
+    left: -2%;
+  }
+  
+  .xiadan {
+    color: #f83244;
+  }
+  
+  .huabie {
+    color: #13acec;
+  }
+  
+  .youhui,
+  .fenqi {
+    font-size: 12px;
+    color: black;
+  }
+  
+  .price {
+    color: #fe7e33;
+    font-size: 12px;
+    position: relative;
+    left: -1%;
+  }
+  
+  .LogoPath {
+    flex: 2;
+  }
+  
+  .LogoBox {
+    width: 70%;
+    background-color: white;
+    border: 1px solid #ccc;
+    position: relative;
+    margin: 0 auto;
+    top: 40%;
+    transform: translateY(-50%);
+  }
+  
+  .Logo {
+    margin-top: 10%;
+  }
+  
+  .Logo img {
+    position: relative;
+    width: 50%;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+  }
+  
+  .LogoPath_name {
+    width: 80%;
+    text-align: center;
+    margin: 10% 0 0% 10%;
+    border-bottom: #999 1px dashed;
+    line-height: 200%;
+  }
+  
+  .LogoBox_bottom {
+    margin: 2% 0;
+    position: relative;
+  }
+  .commentsCount{
+    font-size: 12px;
+  }
+  .haoping{
+    position: relative;
+    float: right;
+    font-size: 12px;
+  }
+  .bottom {
+    display: flex;
+    margin: 2% 0;
+  }
+  
+  .infoList {
+    flex: 2;
+    background-color: white;
+    box-shadow: 2px 2px 1px 2px #888888;
+  }
+  .infoList_title{
+    margin: 2% 0 0 2%;
+    color: #251d1d;
+  }
+  .infolist_list{
+    margin-top: 2%;
+  }
+  .data_title,.data_fieldValue{
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .imgaeList_list{
+    font-size: 12px;
+    color: black;
+  }
+  .imgaeList_img{
+    width: 80%;
+    position: relative;
+    left: 10%;
+  }
+  .hotList {
+    flex: 1; 
+    position: relative;
+  }
+  
+  .itemBox:nth-child(n+1){
+    margin-top: 20%;
+  }
+  .hotList div img {
+    position: relative;
+    width: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .infoList_info {
+    width: 50%;
+    position: absolute;
+    left: 25%;
+    background-color: white;
+    transform: translateY(-40%);
+    box-shadow: 0 1px 1px 1px #888888;
+  }
+  .infoList_info:hover{
+    transform: translateY(-30px);
+  }
+  .hotList_title{
+    font-size: 12px;
+    line-height: 12px;
+    margin-top: 2%;
+    margin-left: 2%;
+    color: black;
+  }
+  .hotList_shopArea{
+    font-size: 10px;
+    line-height: 10px;
+    margin-left: 2%;
+  }
+  .hotList_price{
+    font-weight: 600;
+    color: red;
+    margin-bottom: -1%;
+    margin-left: 2%;
+  }
+  .icon_star{
+    color: #ffa800;
+  }
+  .recommendMerchantsBox{
+    position: relative;
+    display: flex;
+  }
+  .recommendMerchants_name{
+    font-size: 12px;
+    color: black;
+    margin-left: 2%;
+  }
+  .commentsCount{
+    font-size: 12px;
+    color: #999;
+    line-height: 12px;
+    margin-top: -4%;
+    margin-left: 2%;
+  }
+  .recommendMerchants_imgae{
+    flex: 1;
+    width: 90%;
+    background-color: white;
+  }
+  .goodRate{
+    font-size: 12px;
+    float: right;
+    transform: translateX(-160%);
+  }
+  .hotList_remai{
+    margin-left: 10%;
+  }

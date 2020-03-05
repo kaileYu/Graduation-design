@@ -1,9 +1,9 @@
 import style from './index.css';
 import { connect } from 'dva';
 import { Empty } from 'antd';
-import {Link} from 'react-router-dom'
-function yichang({ dispatch, props }) {
-    if (props.props.list !== null && props.props.list !== undefined) {
+import { Link } from 'react-router-dom'
+function SY({ dispatch, list }) {
+    if (list.list !== null && list.list !== undefined) {
         return (
             <div className={style.whole}>
                 {/* <div className={style.head_nav}>
@@ -18,18 +18,18 @@ function yichang({ dispatch, props }) {
                 <div className={style.Box}>
                     <div className={style.infoList}>
                         {
-                            props.props.list.map(function (item, i) {
+                            list.list.list.packageList.list.map(function (item, i) {
                                 return (
                                     <div key={i} className={style.List}>
                                         <div className={style.List}>
-                                            <div className={style.image}><img alt="" src={item.coverPath}/></div>
+                                            <div className={style.image}><img alt="" src={item.coverPath} /></div>
                                             <div className={style.info}>
-                                                <Link to={{pathname:'/query/yichang/yichangInfoList',query:{id:item.id}}}><p className={style.title}>{item.title}</p></Link>
+                                                <Link to={{ pathname: '/query/nanjin/nanjingInfoList', query: { id: item.id } }}><p className={style.title}>{item.title}</p></Link>
                                                 <p>
                                                     <span className={style.shopArea}>{item.merchant.shopArea}</span>|<span className={style.name}>{item.merchant.name}</span>
                                                 </p>
                                                 <p><span className={style.showPrice}>￥{item.showPrice}</span>
-                                                <span className={style.marketPrice}>￥{item.marketPrice}</span></p>
+                                                    <span className={style.marketPrice}>￥{item.marketPrice}</span></p>
                                             </div>
                                         </div>
                                     </div>
@@ -40,11 +40,11 @@ function yichang({ dispatch, props }) {
                     <div className={style.hotList}>
                         <h2>同城热卖套餐</h2>
                         {
-                            props.props.hotList.map(function (item, i) {
+                            list.list.list.hotList.map(function (item, i) {
                                 return (
                                     <div key={i} className={style.HotListDemo}>
                                         <div >
-                                            <img alt="" src={item.coverPath} className={style.image2}/>
+                                            <img alt="" src={item.coverPath} className={style.image2} />
                                         </div>
                                         <div className={style.HotListinfo}>
                                             <p className={style.hotListTitle} alt={item.title}>{item.title}</p>
@@ -61,7 +61,7 @@ function yichang({ dispatch, props }) {
                     <h2>同类套餐商家推荐</h2>
                     <div className={style.recommendMerchantsBox}>
                         {
-                            props.props.topQualityMerchant.map(function (item, i) {
+                            list.list.list.topQualityMerchant.map(function (item, i) {
                                 return (<div className={style.recommendMerchants_imgae} key={i}>
                                     <img alt="" src={item.logoPath} />
                                     <p className={style.recommendMerchants_name}>{item.name}</p>
@@ -83,8 +83,8 @@ function yichang({ dispatch, props }) {
 
 function mapStateToProps(state) {
     return {
-        props: state.yichangList
+        list: state.SYList
     }
 }
 
-export default connect(mapStateToProps)(yichang);
+export default connect(mapStateToProps)(SY);

@@ -6,10 +6,13 @@ import { Icon } from 'antd';
 import Comment from '../../components/comment'
 const { TabPane } = Tabs
 function photographInfoList({ dispatch, list }) {
+    let text = window.location.href;
+    let a = text.split("?");
+    let id = JSON.parse(a[1].substring(3))
     if (list.list !== null && list.list !== undefined) {
         function data() {
             for (var item of list.list.list) {
-                if (item.id === 176824) {
+                if (item.id === id) {
                     return item.props
                 }
             }

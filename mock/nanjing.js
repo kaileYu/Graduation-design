@@ -210,7 +210,7 @@ export default {
                             "marketPrice": 12888,
                             "showPrice": 5988,
                             "id": 552442,
-                            "title": "一价全包】机票补贴+送婚纱MV包邮+4天海景酒店",
+                            "title": "【一价全包】机票补贴+送婚纱MV包邮+4天海景酒店",
                             "coverPath": "https://qnm.hunliji.com/C3D3C8E8E6D9A2E6429FFB9680241667.jpg",
                             "merchant":
                             {

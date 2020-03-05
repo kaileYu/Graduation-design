@@ -40,6 +40,22 @@ export default {
         {
           path: '/photograph/photographInfoList',
           component: '../pages/photograph/photographInfoList/photographInfoList'
+        },
+        {
+          path: 'query/nanjin/nanjingInfoList',
+          component: '../pages/nanjin/nanjingInfoList/nanjingInfoList'
+        },
+        {
+          path: 'query/yichang/yichangInfoList',
+          component: '../pages/yichang/yichangInfoList/yichangInfoList'
+        },
+        {
+          path: '/danxiang',
+          component: '../pages/siyi/siyi'
+        },
+        {
+          path: '/qingdian',
+          component: '../pages/cehua/cehua'
         }
       ],
     },

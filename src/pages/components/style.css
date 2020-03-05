@@ -252,3 +252,6 @@ span{
     font-size: 12px;
     text-decoration: line-through;
 }
+.content.title{
+    margin-left: 2%;
+}

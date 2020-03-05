@@ -1,113 +1,69 @@
-import { Comment, Avatar, Form, Button, List, Input } from 'antd';
-import moment from 'moment';
-import React from 'react'
-import style from "./style.css";
-
-const { TextArea } = Input;
-const CommentList = ({ comments }) => (
-    <List
-      dataSource={comments}
-      header={`${comments.length} ${comments.length > 1 ? 'replies' : 'reply'}`}
-      itemLayout="horizontal"
-      renderItem={props => <Comment {...props} />}
-    />
-  );
-  
-  const Editor = ({ onChange, onSubmit, submitting, value }) => (
-    <div>
-      <Form.Item className={style.TextArea}>
-        <TextArea rows={4} onChange={onChange} value={value} />
-      </Form.Item>
-      <Form.Item>
-        <Button htmlType="submit" loading={submitting} onClick={onSubmit} type="secondary">
-          发表评论
-        </Button>
-      </Form.Item>
-    </div>
-  );
-  
-  class CommentArea extends React.Component {
-    state = {
-      comments: [],
-      submitting: false,
-      value: '',
+import { Comment, Tooltip, Avatar } from 'antd';
+import request from '@/utils/request';
+import React from 'react';
+import { connect } from 'react-redux'
+import style from './comment.css'
+class CommentImpl extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      Commentlist: []
     };
-  
-    handleSubmit = () => {
-      if (!this.state.value) {
-        return;
-      }
-  
-      this.setState({
-        submitting: true,
-      });
-  
-      setTimeout(() => {
-        this.setState({
-          submitting: false,
-          value: '',
-          comments: [
-            {
-              author: 'Han Solo',
-              avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
-              content: <p>{this.state.value}</p>,
-              datetime: moment().fromNow(),
-            },
-            ...this.state.comments,
-          ],
-        });
-      }, 1000);
-    };
-  
-    handleChange = e => {
-      this.setState({
-        value: e.target.value,
-      });
-    };
-  
-    render() {
-      const { comments, submitting, value } = this.state;
-  
-      return (
-        <div>
-          {comments.length > 0 && <CommentList comments={comments} />}
-          <Comment
-            content={
-              <Editor
-                onChange={this.handleChange}
-                onSubmit={this.handleSubmit}
-                submitting={submitting}
-                value={value}
-              />
-            }
-          />
-        </div>
-      );
-    }
+  };
+  componentWillMount() {
+    this.getData();
   }
-
-export default function ({ children }) {
+  getData = () => {
+    request(`/api/comment`).then((res) => {
+      return res
+    }).then(({ data }) => {
+      this.setState({
+        Commentlist: data.list
+      })
+    })
+  }
+  render() {
     return (
-        <div>
-            <Comment
-                actions={[<span key="comment-nested-reply-to">Reply to</span>]}
-                author={<span>Han Solo</span>}
-                avatar={
+      <div className={style.comment}>
+        {
+          this.state.Commentlist.map(function (item, i) {
+            return (
+              <div>
+                <Comment key={i}
+                  author={item.name}
+                  avatar={
                     <Avatar
-                        src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
-                        alt="Han Solo"
+                      src={item.portrait}
+                      alt={item.name}
                     />
-                }
-                content={
-                    <p>
-                        We supply a series of design principles, practical patterns and high quality design
-                        resources (Sketch and Axure).
-                    </p>
-                }
-            >
-                {children}
-            </Comment>
-            <CommentArea/>
-        </div>
-    )
+                  }
+                  content={
+                    <p key={i} className={style.content}>{item.comment}</p>
+                  }
+                  datetime={
+                    <Tooltip key={i}>
+                      <span key={i} className={style.time}>{item.time}</span>
+                    </Tooltip>
+                  }
+                />
+                <p className={style.imageBox}>
+                  {
+                    item.image.map(function (data, i) {
+                      return (
+                        <img alt="" src={data.url} className={style.image} key={i}/>
+                      )
+                    })
+                  }
+                </p>
+              </div>
+            )
+          })
+        }
+      </div>
+    );
+  }
 }
+const mapStatetoProps = (state) => {
+  return { list: state.Commentlist }
+}
+export default connect(mapStatetoProps)(CommentImpl)

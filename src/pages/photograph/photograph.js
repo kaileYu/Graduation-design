@@ -1,7 +1,7 @@
 import style from './index.css';
 import { connect } from 'dva';
 import { Empty } from 'antd';
-import { HashRouter, Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 function photograph({ dispatch, props }) {
     function onChangePhotograph(data) {
         dispatch({
@@ -40,16 +40,14 @@ function photograph({ dispatch, props }) {
                             props.props.list.map(function (item, i) {
                                 return (
                                     <div className={style.photographlist} key={i}>
-                                        <HashRouter>
                                             <img alt="" src={item.coverPath} className={style.image} />
                                             <div className={style.info}>
-                                                <Link to="/photograph/photographInfoList"><p className={style.photographtitle}>{item.title}</p></Link>
+                                                <Link to={{pathname:"/photograph/photographInfoList",query:{id: item.id}}}><p className={style.photographtitle}>{item.title}</p></Link>
                                                 <p><span className={style.shopArea}>{item.merchant.shopArea}</span>|
                                                     <span className={style.name}>{item.merchant.name}</span></p>
                                                 <p><span className={style.showPrice}>￥{item.showPrice}</span>
                                                     <span className={style.marketPrice}>￥{item.marketPrice}</span></p>
                                             </div>
-                                        </HashRouter>
                                     </div>
                                 )
                             })
