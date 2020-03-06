@@ -56,6 +56,10 @@ export default {
         {
           path: '/qingdian',
           component: '../pages/cehua/cehua'
+        },
+        {
+          path: '/qingdian/Info',
+          component: '../pages/cehua/cehuaInfoList/cehuaInfoList'
         }
       ],
     },

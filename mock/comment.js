@@ -1,8 +1,7 @@
 export default {
     'GET /api/comment': (req, res) => {
         res.setHeader("Content-Type", "application/json;charset=utf-8");
-        var comment = {
-            "list":
+        var comment = 
                 [
                     {
                         "portrait": "https://qnm.hunliji.com/o_1d7ds0ebu1cn21lm8148c12qo1rjv9.png",
@@ -135,7 +134,11 @@ export default {
                         "dislike": 0
                     }
                 ]
-        }
+        
         res.end(JSON.stringify(comment));
+    },
+    "POST /api/comment": (req,res)=>{
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        res.end("ok")
     }
 }

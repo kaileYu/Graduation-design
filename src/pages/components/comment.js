@@ -1,15 +1,72 @@
-import { Comment, Tooltip, Avatar } from 'antd';
+// import { Comment, Tooltip, Avatar } from 'antd';
+import { Comment, Tooltip, Avatar, Button, Input, Form } from 'antd';
 import request from '@/utils/request';
 import React from 'react';
 import { connect } from 'react-redux'
 import style from './comment.css'
+import moment from 'moment';
+import axios from 'axios'
+const { TextArea } = Input
+const Editor = ({ onChange, onSubmit, submitting }) => (
+  <div>
+    <Form.Item method='post'>
+      <TextArea rows={4} onChange={onChange} />
+    </Form.Item>
+    <Form.Item>
+      <Button htmlType="submit" loading={submitting} onClick={onSubmit} type="primary">
+        <span className={style.submitButton}>评论</span>
+      </Button>
+    </Form.Item>
+  </div>
+);
 class CommentImpl extends React.Component {
+  handleSubmit = () => {
+    if (!this.state.value) {
+      return;
+    }
+
+    this.setState({
+      submitting: true,
+    });
+
+    setTimeout(() => {
+      this.setState({
+        submitting: false,
+        value: '',
+        comments: [
+          {
+            author: '用户',
+            avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+            content: <p>{this.state.value}</p>,
+            datetime: moment().fromNow(),
+          },
+          ...this.state.comments,
+        ],
+      });
+    }, 1000);
+  };
   constructor(props) {
     super(props);
     this.state = {
-      Commentlist: []
+      Commentlist: [],
+      comments: [],
+      submitting: false,
+      value: ''
     };
   };
+  postComment = () => {
+    axios.post('/api/comment',{
+      data: {
+        comment: "TextArea.value",
+        name: "this.state.comments.author"
+      }
+    }).then(function (response) {
+      console.log(response)
+    }).catch(function(error){
+      console.log(error)
+    })
+  }
+
   componentWillMount() {
     this.getData();
   }
@@ -18,11 +75,12 @@ class CommentImpl extends React.Component {
       return res
     }).then(({ data }) => {
       this.setState({
-        Commentlist: data.list
+        Commentlist: data
       })
     })
   }
   render() {
+    const { comments, submitting, value } = this.state;
     return (
       <div className={style.comment}>
         {
@@ -50,7 +108,7 @@ class CommentImpl extends React.Component {
                   {
                     item.image.map(function (data, i) {
                       return (
-                        <img alt="" src={data.url} className={style.image} key={i}/>
+                        <img alt="" src={data.url} className={style.image} key={i} />
                       )
                     })
                   }
@@ -59,6 +117,18 @@ class CommentImpl extends React.Component {
             )
           })
         }
+        {comments}
+        <Comment
+          content={
+            <Editor
+              onClick={this.postComment}
+              onChange={this.handleChange}
+              onSubmit={this.handleSubmit}
+              submitting={submitting}
+              value={value}
+            />
+          }
+        />
       </div>
     );
   }

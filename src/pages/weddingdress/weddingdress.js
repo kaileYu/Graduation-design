@@ -6,9 +6,6 @@ import { withRouter } from 'react-router-dom'
 import { Link } from 'react-router-dom';
 import React from 'react'
 function weddingdress({ data }, props) {
-    const handleClick = () => {
-        // this.props.history.push({pathname:'/weddingdress/weddingdressInfoList'})
-    }
     if (data.props.list !== null && data.props.list !== undefined) {
         return (
             <div className={style.weddingdress}>
@@ -75,7 +72,6 @@ function weddingdress({ data }, props) {
                         </div>
                     </div>
                 </div>
-                <button onClick={handleClick}>asada</button>
                 <div className={style.recommendMerchants}>
                     <h2>同类套餐商家推荐</h2>
                     <div className={wedding.recommendMerchantsBox}>
