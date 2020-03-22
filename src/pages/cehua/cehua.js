@@ -6,14 +6,22 @@ function CH({ dispatch, list }) {
     if (list.list !== null && list.list !== undefined) {
         return (
             <div className={style.whole}>
-                {/* <div className={style.head_nav}>
-                    <ul className={style.nav}>排序
-                        <li>综合排序</li>
-                        <li>最新发布</li>
-                        <li>收藏最多</li>
-                        <li>价格从高到低</li>
-                        <li>价格从低到高</li>
-                    </ul>
+                {/* <div className={style.photograph_nav}>
+                    {
+                        list.list.marks.map(function (item, i) {
+                            return (
+                                <ul className={style.pnav} key={i}>{item.name}
+                                    <li>不限</li>
+                                    {
+                                        item.children.map(function (data, i) {
+                                            return (<li key={i} value={data.markId}>{data.name}</li>
+                                            )
+                                        })
+                                    }
+                                </ul>
+                            )
+                        })
+                    }
                 </div> */}
                 <div className={style.Box}>
                     <div className={style.infoList}>

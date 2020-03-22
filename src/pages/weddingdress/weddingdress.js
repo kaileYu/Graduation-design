@@ -5,43 +5,35 @@ import wedding from './wedding.css';
 import { withRouter } from 'react-router-dom'
 import { Link } from 'react-router-dom';
 import React from 'react'
-function weddingdress({ data }, props) {
+function weddingdress({ data }) {
     if (data.props.list !== null && data.props.list !== undefined) {
         return (
             <div className={style.weddingdress}>
-                {/* <div className={style.wedding_nav}>
-                        <ul className={style.wnav}>风格
-                        <li>不限</li>
-                            <li>宫廷</li>
-                            <li>男士礼服</li>
-                            <li>时尚</li>
-                            <li>甜美</li>
-                            <li>纪实风</li>
-                            <li>简约</li>
-                            <li>优雅</li>
-                            <li>中式</li>
-                        </ul>
-                        <ul className={style.wnav}>排序
-                        <li>综合排序</li>
-                            <li>最新发布</li>
-                            <li>收藏最多</li>
-                            <li>价格从高到低</li>
-                            <li>价格从地到高</li>
-                            <li>纪实风</li>
-                        </ul>
-                    </div> */}
+                {/* <div className={wedding.photograph_nav}>
+                    {
+                        data.props.marks.map(function (item, i) {
+                            return (
+                                <ul className={wedding.pnav} key={i}>{item.name}
+                                    <li className={wedding.actived} class="actived">不限</li>
+                                    {
+                                        item.children.map(function (data, i) {
+                                            return (<li key={i} value={data.markId}>{data.name}</li>
+                                            )
+                                        })
+                                    }
+                                </ul>
+                            )
+                        })
+                    }
+                </div> */}
                 <div className={style.bigbox}>
                     <div className={style.weddingbox} id='cha' >
                         {
                             data.props.list.map(function (item, i) {
-                                // function goToWeddingdressList(id) {
-                                //     router.push({pathname:`/weddingdress/weddingdressInfoList`,id:item.id})
-                                // }
                                 return (
                                     <div key={i} className={style.weddinglist}>
                                         <img alt="" src={item.coverPath} className={style.image} />
                                         <div className={style.info}>
-                                            {/* <p className={style.weddingtitle} onClick={goToWeddingdressList(item.id)}> {item.title} </p> */}
                                             <Link to={{ pathname: '/weddingdress/weddingdressInfoList', query: { id: item.id } }}><p className={style.weddingtitle}> {item.title} </p></Link>
                                             <p><span className={style.shopArea}>{item.merchant.shopArea}</span>|
                                                 <span className={style.name}>{item.merchant.name}</span></p>

@@ -6,7 +6,8 @@ import { connect } from 'react-redux'
 import style from './comment.css'
 import moment from 'moment';
 import axios from 'axios'
-const { TextArea } = Input
+const { TextArea } = Input;
+
 const Editor = ({ onChange, onSubmit, submitting }) => (
   <div>
     <Form.Item method='post'>
@@ -80,7 +81,7 @@ class CommentImpl extends React.Component {
     })
   }
   render() {
-    const { comments, submitting, value } = this.state;
+    const { comments, submitting, value} = this.state;
     return (
       <div className={style.comment}>
         {

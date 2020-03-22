@@ -6,25 +6,33 @@ function SY({ dispatch, list }) {
     if (list.list !== null && list.list !== undefined) {
         return (
             <div className={style.whole}>
-                {/* <div className={style.head_nav}>
-                    <ul className={style.nav}>排序
-                        <li>综合排序</li>
-                        <li>最新发布</li>
-                        <li>收藏最多</li>
-                        <li>价格从高到低</li>
-                        <li>价格从低到高</li>
-                    </ul>
+                {/* <div className={style.photograph_nav}>
+                    {
+                        list.list.marks.map(function (item, i) {
+                            return (
+                                <ul className={style.pnav} key={i}>{item.name}
+                                    <li>不限</li>
+                                    {
+                                        item.children.map(function (data, i) {
+                                            return (<li key={i} value={data.markId}>{data.name}</li>
+                                            )
+                                        })
+                                    }
+                                </ul>
+                            )
+                        })
+                    }
                 </div> */}
                 <div className={style.Box}>
                     <div className={style.infoList}>
                         {
-                            list.list.list.packageList.list.map(function (item, i) {
+                            list.list.list.props.pageProps.packageList.list.map(function (item, i) {
                                 return (
                                     <div key={i} className={style.List}>
                                         <div className={style.List}>
                                             <div className={style.image}><img alt="" src={item.coverPath} /></div>
                                             <div className={style.info}>
-                                                <Link to={{ pathname: '/query/nanjin/nanjingInfoList', query: { id: item.id } }}><p className={style.title}>{item.title}</p></Link>
+                                                <Link to={{ pathname: '/nanjin/nanjingInfoList', query: { id: item.id } }}><p className={style.title}>{item.title}</p></Link>
                                                 <p>
                                                     <span className={style.shopArea}>{item.merchant.shopArea}</span>|<span className={style.name}>{item.merchant.name}</span>
                                                 </p>
@@ -40,7 +48,7 @@ function SY({ dispatch, list }) {
                     <div className={style.hotList}>
                         <h2>同城热卖套餐</h2>
                         {
-                            list.list.list.hotList.map(function (item, i) {
+                            list.list.list.props.pageProps.hotList.map(function (item, i) {
                                 return (
                                     <div key={i} className={style.HotListDemo}>
                                         <div >
@@ -61,7 +69,7 @@ function SY({ dispatch, list }) {
                     <h2>同类套餐商家推荐</h2>
                     <div className={style.recommendMerchantsBox}>
                         {
-                            list.list.list.topQualityMerchant.map(function (item, i) {
+                            list.list.list.props.pageProps.topQualityMerchant.map(function (item, i) {
                                 return (<div className={style.recommendMerchants_imgae} key={i}>
                                     <img alt="" src={item.logoPath} />
                                     <p className={style.recommendMerchants_name}>{item.name}</p>

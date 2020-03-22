@@ -17,7 +17,6 @@ export default {
             yield put({
                 type: 'save',
                 payload: {
-                    currentPage: parseInt(data.packageList.currentPage) * 10,
                     list: data.packageList.list,
                     hotList: data.hotList,
                     marks: data.marks,

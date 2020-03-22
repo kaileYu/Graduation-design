@@ -1,20 +1,20 @@
 import style from './index.css';
 import { connect } from 'dva';
 import { Empty } from 'antd';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 function nanjing({ dispatch, props }) {
     if (props.props.list !== null && props.props.list !== undefined) {
+        // const ListPageSize = 10;
+        // const HotListPageSize = 5;
+        // var pageIndex = 1
+        // var ListStartIndex = (pageIndex - 1) * ListPageSize;
+        // var ListEndIndex = pageIndex * ListPageSize;
+        // var HotListStartIndex = (pageIndex - 1) * HotListPageSize;
+        // var HotListEndIndex = pageIndex * HotListPageSize;
+        // const TempList = props.props.list.slice(ListStartIndex, ListEndIndex)
+        // const TempHotList = props.props.hotList.slice(HotListStartIndex, HotListEndIndex);
         return (
             <div className={style.whole}>
-                {/* <div className={style.head_nav}>
-                    <ul className={style.nav}>排序
-                        <li>综合排序</li>
-                        <li>最新发布</li>
-                        <li>收藏最多</li>
-                        <li>价格从高到低</li>
-                        <li>价格从低到高</li>
-                    </ul>
-                </div> */}
                 <div className={style.Box}>
                     <div className={style.infoList}>
                         {
@@ -24,7 +24,7 @@ function nanjing({ dispatch, props }) {
                                         <div className={style.List}>
                                             <div className={style.image}><img alt="" src={item.coverPath} /></div>
                                             <div className={style.info}>
-                                            <Link to={{pathname:'/query/nanjin/nanjingInfoList',query:{id:item.id}}}><p className={style.title}>{item.title}</p></Link>
+                                                <Link to={{ pathname: '/nanjin/nanjingInfoList', query: { id: item.id } }}><p className={style.title}>{item.title}</p></Link>
                                                 <p>
                                                     <span className={style.shopArea}>{item.merchant.shopArea}</span>|<span className={style.name}>{item.merchant.name}</span>
                                                 </p>
@@ -78,9 +78,7 @@ function nanjing({ dispatch, props }) {
             <Empty />
         )
     }
-
 }
-
 function mapStateToProps(state) {
     return {
         props: state.nanjinglist

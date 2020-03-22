@@ -15,9 +15,9 @@ export default {
             yield put({
                 type: 'save',
                 payload: {
-                    list: data.props.packageList.list,
-                    hotList: data.props.hotList,
-                    topQualityMerchant: data.props.topQualityMerchant
+                    list: data.props.pageProps.packageList.list,
+                    hotList: data.props.pageProps.hotList,
+                    topQualityMerchant: data.props.pageProps.topQualityMerchant
                 }
             })
         }
@@ -25,7 +25,7 @@ export default {
     subscriptions: {
         setup({ dispatch, history }) {
             return history.listen(({ pathname, query }) => {
-                if (pathname === '/quary/yichang') {
+                if (pathname === '/yichang') {
                     dispatch({ type: 'getyichangList', payload: query })
                 }
             })

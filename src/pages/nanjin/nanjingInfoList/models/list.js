@@ -22,7 +22,7 @@ export default {
     subscriptions: {
         setup({ dispatch, history }) {
             return history.listen(({ pathname, query }) => {
-                if (pathname === '/query/nanjin/nanjingInfoList') {
+                if (pathname === '/nanjin/nanjingInfoList') {
                     dispatch({ type: 'getnanjinInfoList', payload: query.id })
                 }
             })

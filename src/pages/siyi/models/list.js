@@ -14,7 +14,8 @@ export default {
             yield put({
                 type: 'save',
                 payload: {
-                    list: data    
+                    list: data,
+                    marks: data.props.pageProps.marks   
                 }
             })
         }

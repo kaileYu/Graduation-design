@@ -25,7 +25,7 @@ export default {
     subscriptions: {
         setup({ dispatch, history }) {
             return history.listen(({ pathname, query }) => {
-                if (pathname === '/quary/nanjin') {
+                if (pathname === '/nanjin') {
                     dispatch({ type: 'getnanjinList', payload: query })
                 }
             })

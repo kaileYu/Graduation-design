@@ -1,75 +1,111 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-.box{
-    position: relative;
-    width: 80%;
+
+.box {
+  position: relative;
+  width: 80%;
 }
-.hotList{
-    position: relative;
-    margin-top: 25%;
+.photograph_nav {
+  padding-top: 2%;
+  margin: 0 auto;
+  box-shadow: 5px 5px 5px #999;
 }
-.info{
-    position: absolute;
-    bottom: -35%;
-    left: 5%;
-    background-color: white;
-    width: 80%;
+
+.pnav{
+  list-style: none;
+  width: 100%;
 }
-.info:hover{
-    transform:translateY(-3%);
+
+.pnav li{
+  text-align: center;
+  display: inline-block;
+  width: 8%;
+  line-height: 40px;
 }
-.hotListTitle{
-    white-space: nowrap;
-    text-overflow:ellipsis;
-    position: relative;
-    left: 5%;
-    font-size: 14px;
-    overflow: hidden;
-    color: black;
+.pnav>li:hover,.pnav>li.actived{
+  color: #f83244;
 }
-.hotListName{
-    position: relative;
-    font-size: 12px;
-    color: #666;
-    line-height: 14px;
-    left: 5%;
-    margin-top: -2%;
+.pnav li:nth-child(1){
+  color: #f83244;
 }
-.showPrice{
-    color: red;
-    position: relative;
-    left: 4%;
-    margin-top: -2%;
+
+.hotList {
+  position: relative;
+  margin-top: 25%;
 }
+
+.info {
+  position: absolute;
+  bottom: -35%;
+  left: 5%;
+  background-color: white;
+  width: 80%;
+}
+
+.info:hover {
+  transform: translateY(-3%);
+}
+
+.hotListTitle {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  position: relative;
+  left: 5%;
+  font-size: 14px;
+  overflow: hidden;
+  color: black;
+}
+
+.hotListName {
+  position: relative;
+  font-size: 12px;
+  color: #666;
+  line-height: 14px;
+  left: 5%;
+  margin-top: -2%;
+}
+
+.showPrice {
+  color: red;
+  position: relative;
+  left: 4%;
+  margin-top: -2%;
+}
+
 /*同类套餐商家推荐*/
-.recommendMerchantsBox{
-    position: relative;
-    display: flex;
-  }
-  .recommendMerchants_name{
-    font-size: 12px;
-    color: black;
-    margin-left: 2%;
-  }
-  .commentsCount{
-    font-size: 12px;
-    color: #999;
-    line-height: 12px;
-    margin-top: -4%;
-    margin-left: 2%;
-  }
-  .recommendMerchants_imgae{
-    flex: 1;
-    width: 90%;
-    background-color: white;
-  }
-  .goodRate{
-    font-size: 12px;
-    float: right;
-    transform: translateX(-160%);
-  }
-  .hotList_remai{
-    margin-left: 10%;
-  }
+.recommendMerchantsBox {
+  position: relative;
+  display: flex;
+}
+
+.recommendMerchants_name {
+  font-size: 12px;
+  color: black;
+  margin-left: 2%;
+}
+
+.commentsCount {
+  font-size: 12px;
+  color: #999;
+  line-height: 12px;
+  margin-top: -4%;
+  margin-left: 2%;
+}
+
+.recommendMerchants_imgae {
+  flex: 1;
+  width: 90%;
+  background-color: white;
+}
+
+.goodRate {
+  font-size: 12px;
+  float: right;
+  transform: translateX(-160%);
+}
+
+.hotList_remai {
+  margin-left: 10%;
+}

@@ -176,3 +176,26 @@
     margin-left: 10%;
   }
   
+  .photograph_nav {
+    padding-top: 2%;
+    margin: 0 auto;
+    box-shadow: 5px 5px 5px #999;
+  }
+  
+  .pnav,
+  .pnav2 {
+    list-style: none;
+    width: 100%;
+  }
+  
+  .pnav li,
+  .pnav2 li {
+    text-align: center;
+    display: inline-block;
+    width: 8%;
+  }
+  
+  .pnav li:nth-child(1),
+  .pnav2 li:nth-child(1) {
+    color: #f83244;
+  }

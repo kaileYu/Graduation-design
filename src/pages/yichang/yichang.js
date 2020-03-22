@@ -24,7 +24,7 @@ function yichang({ dispatch, props }) {
                                         <div className={style.List}>
                                             <div className={style.image}><img alt="" src={item.coverPath}/></div>
                                             <div className={style.info}>
-                                                <Link to={{pathname:'/query/yichang/yichangInfoList',query:{id:item.id}}}><p className={style.title}>{item.title}</p></Link>
+                                                <Link to={{pathname:'/yichang/yichangInfoList',query:{id:item.id}}}><p className={style.title}>{item.title}</p></Link>
                                                 <p>
                                                     <span className={style.shopArea}>{item.merchant.shopArea}</span>|<span className={style.name}>{item.merchant.name}</span>
                                                 </p>

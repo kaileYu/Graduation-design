@@ -31,17 +31,25 @@ img{
   position: relative;
   left: 15%;
 }
+button{
+  color: #741836;
+}
 .right{
   position: relative;
-  left: 55%;
+  left: 50%;
   top: 10%;
+}
+.right button{
+  margin-right: 2%;
+  border: none;
+  text-decoration: none;
+  background-color: #741836;
+  color: white;
 }
 .nav{
   width: 70%;
   left: 15%;
   position: relative;
-  /* background-color: #741836;
-  border-bottom-color: #741836; */
 }
 .nav:nth-child(n){
   background: #741836;
@@ -65,3 +73,17 @@ img{
   font-size: 12px;
   line-height: 20px;
 } 
+.Login{
+  position: absolute;
+  background-color: white;
+  z-index: 1000;
+  width: 50%;
+  left: 45%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  display: none;
+}
+.Item{
+  position: relative;
+  left: -15%;
+}

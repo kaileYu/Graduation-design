@@ -22,7 +22,7 @@ export default {
     subscriptions: {
         setup({ dispatch, history }) {
             return history.listen(({ pathname, query }) => {
-                if (pathname === '/query/yichang/yichangInfoList') {
+                if (pathname === '/yichang/yichangInfoList') {
                     dispatch({ type: 'getycInfoList', payload: query.id })
                 }
             })

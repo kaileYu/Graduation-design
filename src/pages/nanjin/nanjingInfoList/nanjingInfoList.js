@@ -6,7 +6,6 @@ import { Icon } from 'antd';
 import Comment from '../../components/comment'
 const { TabPane } = Tabs
 function nanjingInfoList({ dispatch, list }) {
-    console.log(list)
     let text = window.location.href;
     let a = text.split("?");
     let id = JSON.parse(a[1].substring(3))

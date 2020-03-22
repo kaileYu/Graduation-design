@@ -1,12 +1,34 @@
-/**
- * 不是真实的 webpack 配置，仅为兼容 webstorm 和 intellij idea 代码跳转
- * ref: https://github.com/umijs/umi/issues/1109#issuecomment-423380125
- */
-
+var path = require('path')
 module.exports = {
+  mode: 'developent',
+  entry: path.resolve(__dirname,'./.umirc.js'),
+  output:{
+    path:path.resolve(__dirname,'dist'),
+    filename: 'bundle.js' 
+  },
   resolve: {
     alias: {
       '@': require('path').resolve(__dirname, 'src'),
     },
   },
+  devServer: {
+    open: true,
+    host: 'localhost',
+    contentBase: 'src',
+    proxy: {
+      '/api': {
+        target: 'http://49.235.111.141:3001/api',
+        changeOrigin: true,
+        pathRewrite: { '^/api': '' },
+        secure: false, 
+      }
+    },
+  },
+  module: { 
+    rules: [ 
+        // 匹配以.css结尾的文件
+        { test: /\.css$/, use: ['style-loader', 'css-loader'] },//处理css文件的规则
+        { test: /\.js$/, use: 'babel-loader', exclude: /node_modules/ },//babel 的 loader规则
+    ]
+},
 };

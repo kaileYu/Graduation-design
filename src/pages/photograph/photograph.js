@@ -22,10 +22,7 @@ function photograph({ dispatch, props }) {
                                     <li>不限</li>
                                     {
                                         item.children.map(function (data, i) {
-                                            return (<li key={i} value={data.markId} onClick={function selectRender(){
-                                                document.getElementsByClassName('photograph').innerHTML = "";
-                                                if(data.id===)
-                                            }}>{data.name}</li>
+                                            return (<li key={i} value={data.markId}>{data.name}</li>
                                             )
                                         })
                                     }

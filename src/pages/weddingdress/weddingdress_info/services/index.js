@@ -1,4 +1,4 @@
 import request from '@/utils/request';
-export function getInfoList({ id }) {
-    return request(`/api/weddingdressInfoList?id=${id}`)
+export function getInfoList() {
+    return request(`/api/weddingdress/weddingdressInfoList`)
 }

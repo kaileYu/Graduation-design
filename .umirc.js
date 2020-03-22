@@ -10,11 +10,11 @@ export default {
       component: '../layouts/index',
       routes: [
         {
-          path: '/quary/nanjin',
+          path: '/nanjin',
           component: '../pages/nanjin/nanjin',
         },
         {
-          path: '/quary/yichang',
+          path: '/yichang',
           component: '../pages/yichang/yichang',
         },
         {
@@ -42,11 +42,11 @@ export default {
           component: '../pages/photograph/photographInfoList/photographInfoList'
         },
         {
-          path: 'query/nanjin/nanjingInfoList',
+          path: '/nanjin/nanjingInfoList',
           component: '../pages/nanjin/nanjingInfoList/nanjingInfoList'
         },
         {
-          path: 'query/yichang/yichangInfoList',
+          path: '/yichang/yichangInfoList',
           component: '../pages/yichang/yichangInfoList/yichangInfoList'
         },
         {
@@ -90,9 +90,10 @@ export default {
   ],
   proxy: {
     '/api': {
-      target: 'http://127.0.0.1:8000/',
+      target: 'http://49.235.111.141:3001/api',
       changeOrigin: true,
-      pathRewrite: { '^/api': '' }
+      pathRewrite: { '^/api': '' },
+      secure: false, 
     }
   },
   alias: {
